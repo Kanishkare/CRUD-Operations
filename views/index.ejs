@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>All posts</title>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+     <h1>Post for Change</h1>
+     <% for(post of posts){%>
+        <div class="post">
+            <h2 class="user"> <%= post.username %></h2>
+            <h2 class="content"> <%= post.content %></h2>
+            <br>
+            <a href="/posts/<%=post.id%>">View Post</a>
+            <a href="/posts/<%=post.id%>/edit">Edit post</a>
+        </div>
+        </div>
+    <% } %>
+
+    <br>
+    <a href="/posts/new">Create a new post</a>
+</body>
+</html>
+
+
